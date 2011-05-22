@@ -27,12 +27,13 @@
   KalTileView *selectedTile;
   KalTileView *highlightedTile;
   BOOL transitioning;
+  CGSize tileSize;
 }
 
 @property (nonatomic, readonly) BOOL transitioning;
 @property (nonatomic, readonly) KalDate *selectedDate;
 
-- (id)initWithFrame:(CGRect)frame logic:(KalLogic *)logic delegate:(id<KalViewDelegate>)delegate;
+- (id)initWithFrame:(CGRect)frame tileSize:(CGSize)theTileSize logic:(KalLogic *)theLogic delegate:(id<KalViewDelegate>)theDelegate;
 - (void)selectDate:(KalDate *)date;
 - (void)markTilesForDates:(NSArray *)dates;
 

@@ -17,7 +17,7 @@
 #define SLIDE_UP 1
 #define SLIDE_DOWN 2
 
-const CGSize kTileSize = { 46.f, 44.f };
+//const CGSize kTileSize = { 46.f, 46.f };
 
 static NSString *kSlideAnimationId = @"KalSwitchMonths";
 
@@ -31,7 +31,7 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
 
 @synthesize selectedTile, highlightedTile, transitioning;
 
-- (id)initWithFrame:(CGRect)frame logic:(KalLogic *)theLogic delegate:(id<KalViewDelegate>)theDelegate
+- (id)initWithFrame:(CGRect)frame tileSize:(CGSize)theTileSize logic:(KalLogic *)theLogic delegate:(id<KalViewDelegate>)theDelegate
 {
   // MobileCal uses 46px wide tiles, with a 2px inner stroke 
   // along the top and right edges. Since there are 7 columns,
@@ -41,7 +41,8 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
   // to accomodate all 7 columns. The 7th day's 2px inner stroke
   // will be clipped off the screen, but that's fine because
   // MobileCal does the same thing.
-  frame.size.width = 7 * kTileSize.width;
+  tileSize = theTileSize;
+  frame.size.width = 7 * tileSize.width;
   
   if (self = [super initWithFrame:frame]) {
     self.clipsToBounds = YES;
@@ -49,8 +50,8 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
     delegate = theDelegate;
     
     CGRect monthRect = CGRectMake(0.f, 0.f, frame.size.width, frame.size.height);
-    frontMonthView = [[KalMonthView alloc] initWithFrame:monthRect];
-    backMonthView = [[KalMonthView alloc] initWithFrame:monthRect];
+    frontMonthView = [[KalMonthView alloc] initWithFrame:monthRect andTileSize:tileSize];
+    backMonthView = [[KalMonthView alloc] initWithFrame:monthRect andTileSize:tileSize];
     backMonthView.hidden = YES;
     [self addSubview:backMonthView];
     [self addSubview:frontMonthView];
@@ -160,12 +161,12 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
   // set initial positions before the slide
   if (direction == SLIDE_UP) {
     backMonthView.top = keepOneRow
-      ? frontMonthView.bottom - kTileSize.height
+      ? frontMonthView.bottom - tileSize.height
       : frontMonthView.bottom;
   } else if (direction == SLIDE_DOWN) {
     NSUInteger numWeeksToKeep = keepOneRow ? 1 : 0;
     NSInteger numWeeksToSlide = [backMonthView numWeeks] - numWeeksToKeep;
-    backMonthView.top = -numWeeksToSlide * kTileSize.height;
+    backMonthView.top = -numWeeksToSlide * tileSize.height;
   } else {
     backMonthView.top = 0.f;
   }

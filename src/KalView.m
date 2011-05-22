@@ -148,9 +148,12 @@ static const CGFloat kMonthLabelHeight = 17.f;
   // out to fit the # of weeks in the currently displayed month.
   // So the only part of the frame that we need to specify is the width.
   CGRect fullWidthAutomaticLayoutFrame = CGRectMake(0.f, 0.f, self.width, 0.f);
+	
+  // specify tile size for small devices
+  CGSize smallTileSize = CGSizeMake(46.0f, 46.0f);
 
   // The tile grid (the calendar body)
-  gridView = [[KalGridView alloc] initWithFrame:fullWidthAutomaticLayoutFrame logic:logic delegate:delegate];
+  gridView = [[KalGridView alloc] initWithFrame:fullWidthAutomaticLayoutFrame tileSize:smallTileSize logic:logic delegate:delegate];
   [gridView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
   [contentView addSubview:gridView];
 

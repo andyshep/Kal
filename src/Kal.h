@@ -35,6 +35,7 @@
  */
 
 #import "KalViewController.h"
+#import "KalLargeViewController.h"
 #import "KalDataSource.h"
 
 // The KalDataSource implementation should post this notification

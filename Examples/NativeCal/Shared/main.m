@@ -2,8 +2,8 @@
 //  main.m
 //  NativeCal
 //
-//  Created by Keith Lazuka on 7/7/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Created by Andrew Shepard on 5/20/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

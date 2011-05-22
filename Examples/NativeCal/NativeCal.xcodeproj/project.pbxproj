@@ -10,29 +10,23 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2860E328111B887F00E27156 /* AppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E326111B887F00E27156 /* AppDelegate_iPhone.m */; };
+		2860E329111B887F00E27156 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E327111B887F00E27156 /* MainWindow_iPhone.xib */; };
+		2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E32C111B888700E27156 /* AppDelegate_iPad.m */; };
+		2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_iPad.xib */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		533B295F11E4A8E100B3CC07 /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B295B11E4A89500B3CC07 /* libKal.a */; };
-		533B296811E4A90D00B3CC07 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 533B296711E4A90D00B3CC07 /* Kal.bundle */; };
-		533B296F11E4A9AA00B3CC07 /* NativeCalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 533B296C11E4A9AA00B3CC07 /* NativeCalAppDelegate.m */; };
-		533B297011E4A9AA00B3CC07 /* EventKitDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 533B296E11E4A9AA00B3CC07 /* EventKitDataSource.m */; };
-		533B297F11E4B26E00B3CC07 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B297E11E4B26E00B3CC07 /* EventKit.framework */; };
-		533B298111E4B27600B3CC07 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B298011E4B27600B3CC07 /* EventKitUI.framework */; };
+		F7CCAC761387F9A000F793CE /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CCAC751387F99E00F793CE /* libKal.a */; };
+		F7F69E3E13876B0000EEF090 /* EventKitDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F69E3D13876B0000EEF090 /* EventKitDataSource.m */; };
+		F7F69E7D13876CB300EEF090 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F69E7C13876CB300EEF090 /* EventKit.framework */; };
+		F7F69E7F13876CB300EEF090 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F69E7E13876CB300EEF090 /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		533B295A11E4A89500B3CC07 /* PBXContainerItemProxy */ = {
+		F7CCAC741387F99E00F793CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 533B295311E4A89500B3CC07 /* Kal.xcodeproj */;
+			containerPortal = F7CCAC6D1387F99E00F793CE /* Kal.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = Kal;
-		};
-		533B295D11E4A8BA00B3CC07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 533B295311E4A89500B3CC07 /* Kal.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Kal;
 		};
 /* End PBXContainerItemProxy section */
@@ -41,19 +35,21 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* NativeCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2860E325111B887F00E27156 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPhone.h; sourceTree = "<group>"; };
+		2860E326111B887F00E27156 /* AppDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPhone.m; sourceTree = "<group>"; };
+		2860E327111B887F00E27156 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		2860E32B111B888700E27156 /* AppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPad.h; sourceTree = "<group>"; };
+		2860E32C111B888700E27156 /* AppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPad.m; sourceTree = "<group>"; };
+		2860E32D111B888700E27156 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* NativeCal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeCal_Prefix.pch; sourceTree = "<group>"; };
-		533B295311E4A89500B3CC07 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../src/Kal.xcodeproj; sourceTree = SOURCE_ROOT; };
-		533B296711E4A90D00B3CC07 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../src/Kal.bundle; sourceTree = SOURCE_ROOT; };
-		533B296B11E4A9AA00B3CC07 /* NativeCalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeCalAppDelegate.h; sourceTree = "<group>"; };
-		533B296C11E4A9AA00B3CC07 /* NativeCalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeCalAppDelegate.m; sourceTree = "<group>"; };
-		533B296D11E4A9AA00B3CC07 /* EventKitDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventKitDataSource.h; sourceTree = "<group>"; };
-		533B296E11E4A9AA00B3CC07 /* EventKitDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventKitDataSource.m; sourceTree = "<group>"; };
-		533B297E11E4B26E00B3CC07 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		533B298011E4B27600B3CC07 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* NativeCal-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NativeCal-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F7CCAC6D1387F99E00F793CE /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../src/Kal.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F7F69E3C13876B0000EEF090 /* EventKitDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventKitDataSource.h; path = Shared/EventKitDataSource.h; sourceTree = "<group>"; };
+		F7F69E3D13876B0000EEF090 /* EventKitDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventKitDataSource.m; path = Shared/EventKitDataSource.m; sourceTree = "<group>"; };
+		F7F69E7C13876CB300EEF090 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		F7F69E7E13876CB300EEF090 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,26 +60,15 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				533B295F11E4A8E100B3CC07 /* libKal.a in Frameworks */,
-				533B297F11E4B26E00B3CC07 /* EventKit.framework in Frameworks */,
-				533B298111E4B27600B3CC07 /* EventKitUI.framework in Frameworks */,
+				F7F69E7D13876CB300EEF090 /* EventKit.framework in Frameworks */,
+				F7F69E7F13876CB300EEF090 /* EventKitUI.framework in Frameworks */,
+				F7CCAC761387F9A000F793CE /* libKal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				533B296B11E4A9AA00B3CC07 /* NativeCalAppDelegate.h */,
-				533B296C11E4A9AA00B3CC07 /* NativeCalAppDelegate.m */,
-				533B296D11E4A9AA00B3CC07 /* EventKitDataSource.h */,
-				533B296E11E4A9AA00B3CC07 /* EventKitDataSource.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,13 +77,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2860E324111B887F00E27156 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				2860E325111B887F00E27156 /* AppDelegate_iPhone.h */,
+				2860E326111B887F00E27156 /* AppDelegate_iPhone.m */,
+				2860E327111B887F00E27156 /* MainWindow_iPhone.xib */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		2860E32A111B888700E27156 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				2860E32B111B888700E27156 /* AppDelegate_iPad.h */,
+				2860E32C111B888700E27156 /* AppDelegate_iPad.m */,
+				2860E32D111B888700E27156 /* MainWindow_iPad.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		28EEBF621118D79A00187D67 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* NativeCal-Info.plist */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				533B297411E4ABD100B3CC07 /* Kal Library */,
-				080E96DDFE201D6D7F000001 /* Classes */,
+				F7F69E5E13876C1200EEF090 /* Kal */,
+				2860E32A111B888700E27156 /* iPad */,
+				2860E324111B887F00E27156 /* iPhone */,
+				28EEBF621118D79A00187D67 /* Shared */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -108,48 +122,40 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F7F69E3C13876B0000EEF090 /* EventKitDataSource.h */,
+				F7F69E3D13876B0000EEF090 /* EventKitDataSource.m */,
 				32CA4F630368D1EE00C91783 /* NativeCal_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* NativeCal-Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				533B297E11E4B26E00B3CC07 /* EventKit.framework */,
-				533B298011E4B27600B3CC07 /* EventKitUI.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				F7F69E7C13876CB300EEF090 /* EventKit.framework */,
+				F7F69E7E13876CB300EEF090 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		533B295411E4A89500B3CC07 /* Products */ = {
+		F7CCAC6E1387F99E00F793CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				533B295B11E4A89500B3CC07 /* libKal.a */,
+				F7CCAC751387F99E00F793CE /* libKal.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		533B297411E4ABD100B3CC07 /* Kal Library */ = {
+		F7F69E5E13876C1200EEF090 /* Kal */ = {
 			isa = PBXGroup;
 			children = (
-				533B296711E4A90D00B3CC07 /* Kal.bundle */,
-				533B295311E4A89500B3CC07 /* Kal.xcodeproj */,
+				F7CCAC6D1387F99E00F793CE /* Kal.xcodeproj */,
 			);
-			name = "Kal Library";
+			name = Kal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +172,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				533B295E11E4A8BA00B3CC07 /* PBXTargetDependency */,
 			);
 			name = NativeCal;
 			productName = NativeCal;
@@ -192,8 +197,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 533B295411E4A89500B3CC07 /* Products */;
-					ProjectRef = 533B295311E4A89500B3CC07 /* Kal.xcodeproj */;
+					ProductGroup = F7CCAC6E1387F99E00F793CE /* Products */;
+					ProjectRef = F7CCAC6D1387F99E00F793CE /* Kal.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -204,11 +209,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		533B295B11E4A89500B3CC07 /* libKal.a */ = {
+		F7CCAC751387F99E00F793CE /* libKal.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libKal.a;
-			remoteRef = 533B295A11E4A89500B3CC07 /* PBXContainerItemProxy */;
+			remoteRef = F7CCAC741387F99E00F793CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -218,8 +223,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				533B296811E4A90D00B3CC07 /* Kal.bundle in Resources */,
+				2860E329111B887F00E27156 /* MainWindow_iPhone.xib in Resources */,
+				2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,20 +236,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				533B296F11E4A9AA00B3CC07 /* NativeCalAppDelegate.m in Sources */,
-				533B297011E4A9AA00B3CC07 /* EventKitDataSource.m in Sources */,
+				2860E328111B887F00E27156 /* AppDelegate_iPhone.m in Sources */,
+				2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */,
+				F7F69E3E13876B0000EEF090 /* EventKitDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		533B295E11E4A8BA00B3CC07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kal;
-			targetProxy = 533B295D11E4A8BA00B3CC07 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -282,11 +280,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../src;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../../src;
 			};
 			name = Debug;
 		};
@@ -298,11 +296,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../src;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-all_load";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

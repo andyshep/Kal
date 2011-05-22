@@ -4,7 +4,6 @@
  */
 
 #import "EventKitDataSource.h"
-#import <EventKit/EventKit.h>
 
 static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 {
