@@ -236,14 +236,30 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
   [self exchangeSubviewAtIndex:[self.subviews indexOfObject:frontMonthView] withSubviewAtIndex:[self.subviews indexOfObject:backMonthView]];
 }
 
-- (void)jumpToSelectedMonth
-{
+- (void)jumpToSelectedMonth {
   [self slide:SLIDE_NONE];
 }
 
-- (void)markTilesForDates:(NSArray *)dates { [frontMonthView markTilesForDates:dates]; }
+- (void)markTilesForDates:(NSArray *)dates { 
+    [frontMonthView markTilesForDates:dates];
+}
 
-- (KalDate *)selectedDate { return selectedTile.date; }
+- (KalDate *)selectedDate { 
+    return selectedTile.date;
+}
+
+- (void)adjustForOrientation:(UIInterfaceOrientation)orientation {
+    NSLog(@"adjust: %d", orientation);
+    
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        tileSize = CGSizeMake(110.0f, 110.0f);
+    }
+    else {
+        tileSize = CGSizeMake(70.0f, 70.0f);
+    }
+    
+    [self sizeToFit];
+}
 
 #pragma mark -
 

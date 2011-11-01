@@ -18,4 +18,9 @@
 
 - (void)addSubviewsToContentView:(UIView *)contentView;
 
+- (void)adjustForOrientation:(UIInterfaceOrientation)orientation;
+
+- (CGFloat)tileSizeHeight;
+- (CGFloat)tileSizeWidth;
+
 @end

@@ -77,7 +77,7 @@ static const CGFloat kMonthLabelHeight = 17.f;
 		CGRect weekdayFrame = CGRectMake(xOffset, 30.f, 110.f, kHeaderHeight - 29.f);
 		UILabel *weekdayLabel = [[UILabel alloc] initWithFrame:weekdayFrame];
 		weekdayLabel.backgroundColor = [UIColor clearColor];
-		weekdayLabel.font = [UIFont boldSystemFontOfSize:10.f];
+		weekdayLabel.font = [UIFont boldSystemFontOfSize:16.f];
 		weekdayLabel.textAlignment = UITextAlignmentCenter;
 		weekdayLabel.textColor = [UIColor colorWithRed:0.3f green:0.3f blue:0.3f alpha:1.f];
 		weekdayLabel.shadowColor = [UIColor whiteColor];
@@ -96,7 +96,8 @@ static const CGFloat kMonthLabelHeight = 17.f;
 	CGRect fullWidthAutomaticLayoutFrame = CGRectMake(0.f, 0.f, self.width, 0.f);
 	
 	// specify tile size for large devices
-	CGSize largeTileSize = CGSizeMake(110.0f, 110.0f);
+    
+	CGSize largeTileSize = CGSizeMake([self tileSizeHeight], [self tileSizeWidth]);
 	
 	NSLog(@"%f, %f", largeTileSize.width, largeTileSize.height);
 	
@@ -119,5 +120,29 @@ static const CGFloat kMonthLabelHeight = 17.f;
 	// Trigger the initial KVO update to finish the contentView layout
 	[gridView sizeToFit];
 }
+
+- (void)adjustForOrientation:(UIInterfaceOrientation)orientation {
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        NSLog(@"portrait");
+    }
+    else {
+        NSLog(@"landscape");
+        // [self setBounds:CGRectMake(0, 0, 100, 100)];
+    }
+    
+    [gridView adjustForOrientation:orientation];
+    [gridView sizeToFit];
+}
+
+#pragma mark - Kal Dimensions Helpers
+
+- (CGFloat)tileSizeHeight {
+    return 110.0f;
+}
+
+- (CGFloat)tileSizeWidth {
+    return 110.0f;
+}
+
 
 @end

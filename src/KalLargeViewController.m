@@ -2,9 +2,10 @@
 //  KalLargeViewController.h
 //  Kal
 //
-//  Created by Andrew Shepard on 5/18/11.
+//  Modified by Andrew Shepard on 5/18/11.
 //
 
+// original work by
 // https://github.com/dirkx/Kal
 // https://github.com/dirkx/Kal/blob/master/src/KalPlainViewController.m
 
@@ -23,6 +24,7 @@ NSString *const KalPlainDataSourceChangedNotification = @"KalPlainDataSourceChan
 @implementation KalLargeViewController
 
 @synthesize dataSource, delegate;
+@synthesize initialSelectedDate;
 
 - (id)initWithSelectedDate:(NSDate *)selectedDate withSize:(CGSize)_size
 {
@@ -30,7 +32,7 @@ NSString *const KalPlainDataSourceChangedNotification = @"KalPlainDataSourceChan
 	
 	if ((self = [super init])) {
 		logic = [[KalLogic alloc] initForDate:selectedDate];
-		initialSelectedDate = [selectedDate retain];
+		self.initialSelectedDate = [KalDate dateFromNSDate:selectedDate];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(significantTimeChangeOccurred) name:UIApplicationSignificantTimeChangeNotification object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:KalPlainDataSourceChangedNotification object:nil];
 	}
@@ -60,15 +62,6 @@ NSString *const KalPlainDataSourceChangedNotification = @"KalPlainDataSourceChan
 		[dataSource release];
 		[aDataSource retain];
 		dataSource = aDataSource;
-	}
-}
-
-- (void)setDelegate:(id <KalViewDelegate>)aDelegate
-{
-	if (delegate != aDelegate) {
-		[delegate release];
-		[aDelegate retain];
-		delegate = aDelegate;
 	}
 }
 
@@ -158,7 +151,7 @@ NSString *const KalPlainDataSourceChangedNotification = @"KalPlainDataSourceChan
 	KalLargeView *kalView = [[KalLargeView alloc] initWithFrame:frame delegate:self logic:logic];
 	self.view = kalView;
 	
-	[kalView selectDate:[KalDate dateFromNSDate:initialSelectedDate]];
+	[kalView selectDate:initialSelectedDate];
 	[kalView release];
 	
 	[self reloadData];
@@ -176,6 +169,14 @@ NSString *const KalPlainDataSourceChangedNotification = @"KalPlainDataSourceChan
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
 	return YES;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [(KalLargeView *)self.view adjustForOrientation:toInterfaceOrientation];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    NSLog(@"didRotate:");
 }
 
 #pragma mark -

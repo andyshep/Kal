@@ -43,4 +43,6 @@
 - (void)slideDown;
 - (void)jumpToSelectedMonth;    // see comment on KalView
 
+- (void)adjustForOrientation:(UIInterfaceOrientation)orientation;
+
 @end

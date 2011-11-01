@@ -9,10 +9,10 @@
 #import "EventKitDataSource.h"
 
 
-@interface AppDelegate_iPad : NSObject <UIApplicationDelegate, UITableViewDelegate> {
+@interface AppDelegate_iPad : NSObject <UIApplicationDelegate, UITableViewDelegate, KalViewDelegate> {
     UIWindow *window;
 	UINavigationController *navController;
-	KalViewController *kal;
+	KalLargeViewController *kal;
 	id dataSource;
 }
 
